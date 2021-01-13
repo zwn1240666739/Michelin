@@ -10,55 +10,15 @@ import Staff from '@/views/Staff/Index'
 import Employee from '@/views/Staff/Employee'
 // import OrderDetail from '@/views/OrderList/OrderDetail'
 import Reserve from '@/views/Reserve/Reserve'
-// const routes = [{
-//         path: '/',
-//         component: Login
-//     },
-//     {
-//         path: '/fp',
-//         component: FindPass
-//     },
-//     {
-//         path: '/home',
-//         component: Home,
-//         children: [
-//             {
-//                 path: '2-1',
-//                 component: DishesManagement,
-
-//             },
-//             {
-//                 path: '2-1-1',
-//                 component: Newly
-//             },
-//             {
-//                 path: '9-1',
-//                 component: Staff
-//             },
-//             {
-//                 path: '9-1-1',
-//                 component: Employee
-//             },
-//             // {
-//             //     path: '/orderDetail',
-//             //     component: OrderDetail
-//             // },
-//             {
-//                 path: '8-2',
-//                 component: Reserve
-//             },
-//         ],
-
-//     }
 import Table from '@/router/Table'
 import Coupon from '@/router/Coupon'
 import Queue from '@/router/Queue'
-
-
 import AccountSetting from '@/views/AccountSetting/AccountSetting'
 import OrderList from '@/views/OrderList/OrderList'
 import OrderDetail from '@/views/OrderList/OrderDetail'
-
+import WorkFloor from '@/views/WorkFloor'
+import DishesClassify from '@/views/DishesManagement/DishesClassify'
+import Shop from '@/views/Shop'
 const routes = [{
         path: '/',
         component: Login
@@ -79,6 +39,10 @@ const routes = [{
             ...Coupon,
             ...Queue,
             {
+                path: '1-1',
+                component: WorkFloor
+            },
+            {
                 path: 'setAccount',
                 component: AccountSetting
             },
@@ -87,12 +51,21 @@ const routes = [{
                 component: OrderList
             },
             {
+                path: '5-1',
+                component: Shop
+            },
+            {
                 path: '2-1',
                 component: DishesManagement,
 
             },
             {
-                path: '2-1-1',
+                path: '2-2',
+                component: DishesClassify,
+
+            },
+            {
+                path: '2-1/2-1-1',
                 component: Newly
             },
             {
@@ -100,13 +73,9 @@ const routes = [{
                 component: Staff
             },
             {
-                path: '9-1-1',
+                path: '9-1/9-1-1',
                 component: Employee
             },
-            // {
-            //     path: '/orderDetail',
-            //     component: OrderDetail
-            // },
             {
                 path: '8-2',
                 component: Reserve

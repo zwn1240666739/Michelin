@@ -9,11 +9,7 @@
             <el-row class="buttons">
                 <el-button>释放桌台</el-button>
                 <el-button>打印小票</el-button>
-<<<<<<< HEAD
-                <el-button>关闭</el-button>
-=======
                 <el-button @click="back">关闭</el-button>
->>>>>>> 4efee7ec9eb213aff78b8107b92462cccff8a1d0
             </el-row>
         </div>
         <div class="tables">
@@ -113,10 +109,7 @@
     </div>
 </template>
 <script>
-<<<<<<< HEAD
-=======
 import { mapActions, mapState } from 'vuex'
->>>>>>> 4efee7ec9eb213aff78b8107b92462cccff8a1d0
 export default {
     data() {
       return {
@@ -171,8 +164,6 @@ export default {
             payMethod: '在线支付'
         }]
       }
-<<<<<<< HEAD
-=======
     },
     methods: {
         back () {
@@ -181,7 +172,6 @@ export default {
     },
     computed: {
         ...mapState(['OrderDetail'])
->>>>>>> 4efee7ec9eb213aff78b8107b92462cccff8a1d0
     }
   }
 </script>

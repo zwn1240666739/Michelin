@@ -153,9 +153,10 @@ export default {
     }
     .body {
         width: 100%;
-        height: 657px;
         display: flex;
-        background-color: rgba(106, 126, 153, 1);;
+        height: 100%;
+        background: url(../assets/bgc.jpeg) no-repeat center;
+        background-size: 100% 100%;
     }
     #submit {
         border-width: 0px;

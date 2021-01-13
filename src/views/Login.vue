@@ -1,7 +1,7 @@
 <template>
     <div class="body">
         <div class="outside">
-                <span class="logo">LOGO</span>
+                <span class="logo">郝强商家管理平台</span>
             <van-form @submit="onSubmit">
                 <van-field
                     v-model="username"
@@ -60,7 +60,7 @@ export default {
               Toast('用户名或密码错误')
           } else {
               localStorage.setItem('_token',123)
-              this.$router.push('/home/4-2')
+              this.$router.push('/home/1-1')
           }
       })
     },
@@ -79,6 +79,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+    
     .outside {
         width: 540px;
         height: 416px;
@@ -92,10 +93,11 @@ export default {
         flex-direction: column;
     }
     .body {
+        height: 100%;
+        background: url(../assets/bgc.jpeg) no-repeat center;
+        background-size: 100% 100%;
         width: 100%;
-        height: 657px;
         display: flex;
-        background-color: rgba(106, 126, 153, 1);;
     }
     #submit {
         border-width: 0px;
@@ -114,13 +116,13 @@ export default {
         color: #FFFFFF;
     }
     .logo {
-        font-family: '微软雅黑';
-        font-weight: 400;
+        font-family: '楷体';
+        font-weight: 600;
         font-style: normal;
-        color: #3BB19C;
+        color: #b36e14;
         text-align: center;
-        font-size: 42px;
-        margin-bottom: 50px;
+        font-size: 30px;
+        margin-bottom: 30px;
     }
     .left,.right {
         font-size: 14px;

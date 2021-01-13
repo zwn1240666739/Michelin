@@ -89,7 +89,7 @@ export default {
         },
         // 新建员工
         employee() {
-            this.$router.push('/home/9-1-1')
+            this.$router.push('/home/9-1/9-1-1')
         }
     },
     mounted() {

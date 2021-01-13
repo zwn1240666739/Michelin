@@ -67,7 +67,7 @@ export default {
             ];
         },
         newly() {
-            this.$router.push('/home/2-1-1')
+            this.$router.push('/home/2-1/2-1-1')
         },
         querySearchAsync(queryString, cb) {
             var restaurants = this.restaurants;
