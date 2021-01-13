@@ -9,6 +9,9 @@ import Coupon from '@/router/Coupon'
 import Queue from '@/router/Queue'
 
 
+import AccountSetting from '@/views/AccountSetting/AccountSetting'
+import OrderList from '@/views/OrderList/OrderList'
+import OrderDetail from '@/views/OrderList/OrderDetail'
 
 const routes = [
   {
@@ -20,12 +23,24 @@ const routes = [
     component: FindPass
   },
   {
+    path: '/OrderDetail',
+    component: OrderDetail
+  },
+  {
     path: '/home',
     component: Home,
     children: [
       ...Table,
       ...Coupon,
-      ...Queue
+      ...Queue,
+      {
+        path: 'setAccount',
+        component: AccountSetting
+      },
+      {
+        path: '4-2',
+        component: OrderList
+      }
     ]
   }
 ]
