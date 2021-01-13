@@ -7,11 +7,13 @@
 
 
 <script>
-import Home from '@/views/Home'
 
 export default {
   components: {
-    Home
+  },
+  created() {
+    //从数据库获取数据然后传给Vuex
+    this.$http.get('http://127.0.0.1:3000').then(ret => console.log(ret))
   }
 }
 </script>

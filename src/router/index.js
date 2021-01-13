@@ -4,6 +4,11 @@ import Home from '@/views/Home'
 Vue.use(VueRouter)
 import Login from '@/views/Login'
 import FindPass from '@/views/FindPass'
+import Table from '@/router/Table'
+import Coupon from '@/router/Coupon'
+import Queue from '@/router/Queue'
+
+
 
 const routes = [
   {
@@ -17,7 +22,11 @@ const routes = [
   {
     path: '/home',
     component: Home,
-    children: []
+    children: [
+      ...Table,
+      ...Coupon,
+      ...Queue
+    ]
   }
 ]
 
