@@ -4,6 +4,9 @@ import Home from '@/views/Home'
 Vue.use(VueRouter)
 import Login from '@/views/Login'
 import FindPass from '@/views/FindPass'
+import AccountSetting from '@/views/AccountSetting/AccountSetting'
+import OrderList from '@/views/OrderList/OrderList'
+import OrderDetail from '@/views/OrderList/OrderDetail'
 
 const routes = [
   {
@@ -15,9 +18,22 @@ const routes = [
     component: FindPass
   },
   {
+    path: '/OrderDetail',
+    component: OrderDetail
+  },
+  {
     path: '/home',
     component: Home,
-    children: []
+    children: [
+      {
+        path: 'setAccount',
+        component: AccountSetting
+      },
+      {
+        path: '4-2',
+        component: OrderList
+      }
+    ]
   }
 ]
 

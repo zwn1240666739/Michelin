@@ -77,6 +77,12 @@
                             <el-menu-item index="/home/9-1">员工管理</el-menu-item>
                             </el-menu-item-group>
                         </el-submenu>
+                        <el-submenu index="10">
+                            <template slot="title"><i class="el-icon-menu"></i>账号设置</template>
+                            <el-menu-item-group>
+                            <el-menu-item index="/home/setAccount">账号设置</el-menu-item>
+                            </el-menu-item-group>
+                        </el-submenu>
                     </el-menu>
                 </el-aside>
                 <!-- 路由视图的展示区 -->
@@ -94,6 +100,7 @@ export default {
             this.$router.push('/home/setAccount')
         },
         quit() {
+            localStorage.setItem('_token','')
             this.$router.push('/')
         }
     }
